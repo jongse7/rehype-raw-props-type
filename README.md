@@ -1,4 +1,4 @@
-# rehype-zod v0.1.0
+# rehype-zod v0.1.1
 
 > Ultra-minimal, **type-only** helper to wire **Zod v4** schemas to **react-markdown** components.  
 > Focused on rehype pipelines. **No runtime validation.**

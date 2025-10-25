@@ -1,6 +1,6 @@
 {
   "name": "rehype-zod",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Type-only helper to map Zod schemas to react-markdown components (rehype-focused).",
   "repository": {
     "type": "git",
