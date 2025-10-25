@@ -2,6 +2,12 @@
   "name": "rehype-zod",
   "version": "0.1.0",
   "description": "Type-only helper to map Zod schemas to react-markdown components (rehype-focused).",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jongse7/rehype-zod.git"
+  },
+  "homepage": "https://github.com/jongse7/rehype-zod#readme",
+  "author": "jongse7",
   "type": "module",
   "exports": {
     ".": {
@@ -17,7 +23,11 @@
     "rehype",
     "react-markdown",
     "zod",
-    "types"
+    "types",
+    "typescript",
+    "markdown",
+    "type-safe",
+    "react"
   ],
   "engines": {
     "node": ">=18.17"
@@ -28,9 +38,12 @@
     "zod": "^4.1.0"
   },
   "devDependencies": {
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "react-markdown": "^9.0.0",
     "tsup": "^8.1.0",
     "typescript": "^5.6.3",
-    "zod": "^4.1.0"
+    "zod": "^3.23.0"
   },
   "scripts": {
     "build": "pnpm run build:js && pnpm run build:types",
