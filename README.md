@@ -1,4 +1,4 @@
-# rehype-zod v0.1.1
+# rehype-zod v0.1.2
 
 > An ultra-minimal, **type-only** helper that wires **Zod v4** schemas to your **custom components** in `react-markdown` (with `rehype-raw`), providing **perfect props type-safety**.
 >
