@@ -1,6 +1,10 @@
 {
   "name": "rehype-raw-props-type",
+<<<<<<< HEAD
   "version": "0.1.0",
+=======
+  "version": "0.2.0",
+>>>>>>> 148b5d3c4ec25afab7db7d8a794e01c8286d6705
   "description": "Type-only helper to map Zod schemas to react-markdown components (rehype-focused).",
   "repository": {
     "type": "git",
