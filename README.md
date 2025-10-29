@@ -1,4 +1,4 @@
-# rehype-zod v0.1.0
+# rehype-raw-props-type v0.1.0
 
 > Ultra-minimal, **type-only** helper to wire **Zod v4** schemas to **react-markdown** components.  
 > Focused on rehype pipelines. **No runtime validation.**
@@ -7,13 +7,13 @@
 
 ```bash
 # npm
-npm i rehype-zod
+npm i rehype-raw-props-type
 
 # yarn
-yarn add rehype-zod
+yarn add rehype-raw-props-type
 
 # pnpm
-pnpm add rehype-zod
+pnpm add rehype-raw-props-type
 ```
 
 **Peer dependencies:**
@@ -36,7 +36,7 @@ npm i react react-markdown zod
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { z } from "zod";
-import zodComponents, { zodComponent } from "rehype-zod";
+import zodComponents, { zodComponent } from "rehype-raw-props-type";
 
 // 1) Define schemas
 const calloutSchema = z.object({

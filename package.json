@@ -1,12 +1,12 @@
 {
-  "name": "rehype-zod",
+  "name": "rehype-raw-props-type",
   "version": "0.1.0",
   "description": "Type-only helper to map Zod schemas to react-markdown components (rehype-focused).",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jongse7/rehype-zod.git"
+    "url": "https://github.com/jongse7/rehype-raw-props-type.git"
   },
-  "homepage": "https://github.com/jongse7/rehype-zod#readme",
+  "homepage": "https://github.com/jongse7/rehype-raw-props-type#readme",
   "author": "jongse7",
   "type": "module",
   "exports": {

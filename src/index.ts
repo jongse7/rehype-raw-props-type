@@ -1,12 +1,12 @@
 import type { ComponentType, ReactNode } from "react";
 import type { Components } from "react-markdown";
-import type { z, ZodTypeAny } from "zod";
+import type { z, ZodType } from "zod";
 
 /**
  * Single schema-component pair with props automatically inferred from schema.
  * @template S - Zod schema type
  */
-export type ZodPair<S extends ZodTypeAny> = Readonly<{
+export type ZodPair<S extends ZodType<any> = ZodType> = Readonly<{
   schema: S;
   component: ComponentType<z.infer<S> & { children?: ReactNode }>;
 }>;
@@ -15,7 +15,7 @@ export type ZodPair<S extends ZodTypeAny> = Readonly<{
  * Mapping of tag names to ZodPair objects.
  * @template M - Record of tag names to Zod schemas
  */
-export type ZodPairMap<M extends Record<string, ZodTypeAny>> = {
+export type ZodPairMap<M extends Record<string, ZodType<any>>> = {
   [K in keyof M]: ZodPair<M[K]>;
 };
 
@@ -35,7 +35,7 @@ export type ZodPairMap<M extends Record<string, ZodTypeAny>> = {
  * const pair = zodComponent(schema, Component);
  * ```
  */
-export function zodComponent<const S extends ZodTypeAny>(
+export function zodComponent<const S extends ZodType<any>>(
   schema: S,
   component: ComponentType<z.infer<S> & { children?: ReactNode }>
 ): ZodPair<S> {
@@ -60,7 +60,7 @@ export function zodComponent<const S extends ZodTypeAny>(
  * <ReactMarkdown components={components}>{markdown}</ReactMarkdown>
  * ```
  */
-export function zodComponents<const M extends Record<string, ZodTypeAny>>(
+export function zodComponents<const M extends Record<string, ZodType<any>>>(
   mapping: ZodPairMap<M>
 ): Components & {
   [K in keyof M]?: (
