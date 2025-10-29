@@ -27,29 +27,6 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
 
-      - name: Update versions from tag
-        run: |
-          TAG="${{ github.event.release.tag_name }}"
-          VERSION="${TAG#v}"
-          echo "📦 Updating to version: $VERSION"
-
-          # Update package.json version
-          node -e "const pkg=require('./package.json');pkg.version='$VERSION';require('fs').writeFileSync('package.json',JSON.stringify(pkg,null,2)+'\n')"
-
-          # Update README.md version
-          sed -i "s/^# rehype-zod v.*/# rehype-zod v$VERSION/" README.md
-
-          echo "✅ Updated package.json and README.md to $TAG"
-
-      - name: Commit version updates
-        run: |
-          TAG="${{ github.event.release.tag_name }}"
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add package.json README.md
-          git commit -m "release: $TAG"
-          git push origin HEAD:main
-
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
 
