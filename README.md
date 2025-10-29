@@ -1,4 +1,4 @@
-# rehype-raw-props-type v0.2.0
+# rehype-raw-props-type v0.2.1
 
 > An ultra-minimal, **type-only** helper that wires **Zod v4** schemas to your **custom components** in `react-markdown` (with `rehype-raw`), providing **perfect props type-safety**.
 >
